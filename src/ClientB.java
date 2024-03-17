@@ -19,7 +19,7 @@ public class ClientB
  
     public void go()
     {
-        JFrame jFrame = new JFrame("simple chat clientB");
+        JFrame jFrame = new JFrame("clientB");
         JPanel jPanel = new JPanel();
  
  
