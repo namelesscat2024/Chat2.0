@@ -14,14 +14,13 @@ public class ClientA
  
     public static void main(String[] args)
     {
-        new SimpleChatClientA().go();
+        new ClientA().go();
     }
  
     public void go()
     {
         JFrame jFrame = new JFrame("simple chat clientA");
         JPanel jPanel = new JPanel();
- 
  
         //创建文本域
         incoming = new JTextArea(15,30);
@@ -78,7 +77,9 @@ public class ClientA
             //与socket建立字符输出流
             writer = new PrintWriter(socket.getOutputStream());
             incoming.append("客户端A 成功连接服务器......" + "\n");
-        } catch (IOException e) {
+        } 
+        catch (IOException e) 
+        {
             e.printStackTrace();
         }
  

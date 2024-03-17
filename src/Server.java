@@ -3,9 +3,8 @@ import java.net.Socket;
 import java.util.*;
 import java.net.*;
 
-public class Server {
- 
- 
+public class Server 
+{
     ArrayList clientOutPutStreams = new ArrayList();
  
     public class ClientHandler implements Runnable
@@ -20,7 +19,8 @@ public class Server {
                 this.socket = clientSocket;
                 InputStreamReader inputStreamReader = new InputStreamReader(socket.getInputStream());
                 reader = new BufferedReader(inputStreamReader);
-            } catch (IOException e) {
+            } 
+            catch (IOException e) {
                 e.printStackTrace();
             }
         }
@@ -31,14 +31,15 @@ public class Server {
             String message = null;
             try
             {
-                //不断地从socket上读入数据
+                //从socket上读入数据
                 while ((message = reader.readLine()) != null)
                 {
                     System.out.println("read " + message);
                     //将数据发送给每一个客户端
                     tellEveryone(message);
                 }
-            }catch (Exception e)
+            }
+            catch (Exception e)
             {
                 e.printStackTrace();
             }
@@ -46,13 +47,15 @@ public class Server {
         }
     }
  
-    public static void main(String[] args) {
-       new SimpleChatServer().go();
+    public static void main(String[] args)
+    {
+       new Server().go();
     }
  
     public void go()
     {
-        try {
+        try 
+        {
             //服务器应用程序对特定的端口号创建ServerSocket
             ServerSocket serverSocket = new ServerSocket(5000);
             while (true)
@@ -67,7 +70,9 @@ public class Server {
                 thread.start();
                 System.out.println("服务器得到一个连接");
             }
-        } catch (IOException e) {
+        } 
+        catch (IOException e) 
+        {
             e.printStackTrace();
         }
     }
@@ -82,7 +87,8 @@ public class Server {
                 PrintWriter writer = (PrintWriter)it.next();
                 writer.println(message);
                 writer.flush();
-            }catch (Exception e)
+            }
+            catch (Exception e)
             {
                 e.printStackTrace();
             }

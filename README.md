@@ -1,18 +1,25 @@
-## Getting Started
+## 项目简介
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+实现简单聊天功能
 
-## Folder Structure
+## 项目结构
 
-The workspace contains two folders by default, where:
+- `src`: 包含源代码的文件夹
+- `lib`: 包含依赖项的文件夹
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+生成文件会放入 `bin` 文件夹
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## 使用指南
 
-## Dependency Management
+先运行Sever类，打开服务器
+再运行ClientA和ClientB类，打开客户端
+在文本框内输入消息，再点击send按钮即可实现聊天
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## 实现功能
+
+- Client-A输入聊天内容，Client B可收到并显示
+- Client-B输入聊天内容，Client A可收到并显示
+
+## 改进
+使用Swing包创建界面

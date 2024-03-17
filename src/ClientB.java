@@ -14,7 +14,7 @@ public class ClientB
  
     public static void main(String[] args)
     {
-        new SimpleChatClientB().go();
+        new ClientB().go();
     }
  
     public void go()
@@ -67,7 +67,8 @@ public class ClientB
     private void setUpNetworking()
     {
  
-        try {
+        try
+         {
             //与服务器建立socket连接
             socket = new Socket("127.0.0.1",5000);
  
@@ -78,7 +79,9 @@ public class ClientB
             //与socket建立字符输出流
             writer = new PrintWriter(socket.getOutputStream());
             incoming.append("客户端B 成功连接服务器.........." + "\n");
-        } catch (IOException e) {
+        }
+         catch (IOException e) 
+         {
             e.printStackTrace();
         }
  
@@ -117,7 +120,8 @@ public class ClientB
                         System.out.println("read " + message);
                         incoming.append(message + "\n");
                     }
-                }catch (Exception e)
+                }
+                catch (Exception e)
                 {
                     e.printStackTrace();
                 }
