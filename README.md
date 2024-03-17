@@ -28,4 +28,5 @@
 - 注册功能
 
 ## 实现效果
-![image](https://github.com/namelesscat2024/Chat2.0/assets/156741789/62bb02bb-46cc-445b-a823-f91eafe59f67)
+![image](https://github.com/namelesscat2024/Chat2.0/assets/156741789/c4af5cf5-1b46-4eaf-bb16-a804c429045e)
+
