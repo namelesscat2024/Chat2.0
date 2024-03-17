@@ -19,7 +19,7 @@ public class ClientA
  
     public void go()
     {
-        JFrame jFrame = new JFrame("simple chat clientA");
+        JFrame jFrame = new JFrame("clientA");
         JPanel jPanel = new JPanel();
  
         //创建文本域
